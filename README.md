@@ -64,9 +64,9 @@ Strategy Mode of The Department Store Discount Dystem for Software Quality Assur
 ![class diagram](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/类图.png)
 
 ### 3.具体分析
-- 在本例中，`MarketAccounts` 充当环境类角色，`Discount` 充当**抽象**策略角色， `EmployeeDiscount`、 `StudentDiscount` 和 `UserDiscount` 充当**具体**策略角色。
-- 将算法的定义放在专门的 `Discount` 策略类中，每一个具体策略类封装了一种实现算法，使用算法的 `MarketAccounts` 环境类针对抽象策略类进行编程，符合“**依赖倒转 `(DIP)` 原则**”。
-- 用户可以在不修改原有系统的基础上选择具体算法或行为，也可以灵活地增加新的算法或行为，符合“**开放-封闭原则 `(OCP)` 原则**”。
+- 在本例中，`MarketAccounts` 充当**环境类**角色，`Discount` 充当**抽象**策略角色， `EmployeeDiscount`、 `StudentDiscount` 和 `UserDiscount` 充当**具体**策略角色。
+- 将算法的定义放在专门的 `Discount` 策略类中，每一个具体策略类封装了一种实现算法，使用算法的 `MarketAccounts` 环境类针对抽象策略类进行编程，符合“**依赖倒转 (DIP) 原则**”。
+- 用户可以在不修改原有系统的基础上选择具体算法或行为，也可灵活地增加新的算法或行为，符合“**开放-封闭原则 (OCP) 原则**”。
 - 此外，为了提高系统的灵活性和可扩展性，将具体策略类的类名存储在配置文件 (路径： `src\com\nenu\market\res\config.xml`) 中，通过工具类 `XmlUtil` 来读取配置文件并反射生成对象。
 
 ## 时序图
