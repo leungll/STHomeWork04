@@ -25,29 +25,30 @@ Strategy Mode of The Department Store Discount Dystem for Software Quality Assur
 
 ## 项目结构
 ```
-├─.idea
-│  └─inspectionProfiles
-├─out
-│  └─production
-│      └─STHomeWork04
-│          ├─com
-│          │  └─nenu
-│          │      └─market
-│          │          ├─client
-│          │          ├─context
-│          │          ├─res
-│          │          ├─strategy
-│          │          └─util
-│          └─META-INF
+│  README.md
+│  STHomeWork04.iml
+│                         
 └─src
     └─com
         └─nenu
             └─market
                 ├─client
+                │      Client.java
+                │      
                 ├─context
+                │      MarketAccounts.java
+                │      
                 ├─res
+                │      config.xml
+                │      
                 ├─strategy
+                │      Discount.java
+                │      EmployeeDiscount.java
+                │      StudentDiscount.java
+                │      UserDiscount.java
+                │      
                 └─util
+                        XmlUtil.java
 ```
 
 ## Strategy 模式分析
