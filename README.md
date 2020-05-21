@@ -52,23 +52,23 @@ Strategy Mode of The Department Store Discount Dystem for Software Quality Assur
 ```
 
 ## Strategy 模式分析
-### 1.策略（Strategy）模式
+### 策略（Strategy）模式
 - 定义：
-    - 定义一系列算法类，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化。它也被成为政策模式，是一种行为型模式。
+    - 定义一系列算法类，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化。它也被称为政策模式，是一种行为型模式。
 - 角色：
     - Context（环境类）：环境类是使用算法的角色，它在解决某个问题（即实现某个方法）时可以采用多种策略。在环境类中维持一个对抽象策略类的引用实例，用于定义所采用的策略。
     - Strategy（抽象策略类）：它为所支持的算法声明了抽象方法，是所有策略类的父类，它可以是抽象类或具体类，也可以是接口。环境类通过抽象策略类中声明的方法在运行时调用具体策略类中实现的算法。
     - ConcreteStrategy（具体策略类）：它实现了在抽象策略类中声明的算法，在运行时，具体策略类将覆盖在环境类中定义的抽象策略类对象，使用一种具体的算法实现某个业务处理。
 
-### 2.模式基本结构图
+### 模式基本结构图
 
 ![class diagram](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/类图.png)
 
-### 3.具体分析
+### 具体分析
 - 在本例中，`MarketAccounts` 充当**环境类**角色，`Discount` 充当**抽象**策略角色， `EmployeeDiscount`、 `StudentDiscount` 和 `UserDiscount` 充当**具体**策略角色。
 - 将算法的定义放在专门的 `Discount` 策略类中，每一个具体策略类封装了一种实现算法，使用算法的 `MarketAccounts` 环境类针对抽象策略类进行编程，符合“**依赖倒转 (DIP) 原则**”。
 - 用户可以在不修改原有系统的基础上选择具体算法或行为，也可灵活地增加新的算法或行为，符合“**开放-封闭原则 (OCP) 原则**”。
 - 此外，为了提高系统的灵活性和可扩展性，将具体策略类的类名存储在配置文件 (路径： `src\com\nenu\market\res\config.xml`) 中，通过工具类 `XmlUtil` 来读取配置文件并反射生成对象。
 
 ## 时序图
-![sequence chart](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/时序图.png)
+![sequence diagram](https://cdn.jsdelivr.net/gh/leungll/ImgHosting/img/时序图.png)
