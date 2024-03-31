@@ -1,5 +1,5 @@
 # STHomeWork04
-Strategy Mode of The Department Store Discount Dystem for Software Quality Assurance and Testing course, Spring 2020, NENU 
+Strategy pattern of department store, Software Testing and Quality Assurance course, 2020 Spring, NENU  
 
 ## 开发环境
 - JAVA版本：1.8
