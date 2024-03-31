@@ -1,5 +1,5 @@
 # STHomeWork04
-Strategy pattern of department store, Software Testing and Quality Assurance course, 2020 Spring, NENU  
+Strategy pattern of department store discount system, Software Testing and Quality Assurance course, 2020 Spring, NENU
 
 ## 开发环境
 - JAVA版本：1.8
